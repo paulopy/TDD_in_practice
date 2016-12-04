@@ -4,11 +4,16 @@
 </head>
 <body>
   <h1>Twoja lista rzeczy do zrobienia</h1>
-<input type="text" name="" value=""
+  <form method="post">
+<input type="text" name="item_text" value=""
 placeholder="Wpisz rzecz do zrobienia" id="id_new_item">
+{% csrf_token %}
+  </form>
+
+
 <table id="id_list_table">
 <tr>
-  ''
+  <td>1: {{ new_item_text }}</td>
 </tr>
 </table>
 
