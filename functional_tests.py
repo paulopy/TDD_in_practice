@@ -17,7 +17,7 @@ class NewVisitorTest(unittest.TestCase):
 
 		self.assertIn('Listy',self.browser.title)
 		header_text = self.browser.find_element_by_tag_name('h1').text
-		self.assertIn('Listy', header_text)
+		self.assertIn('lista', header_text)
 
 		inputbox = self.browser.find_element_by_id('id_new_item')
 		self.assertEqual(
@@ -30,10 +30,11 @@ class NewVisitorTest(unittest.TestCase):
 		inputbox.send_keys(Keys.ENTER)
 
 		table = self.browser.find_element_by_id('id_list_table')
-		rows = table.find_element_by_tag_name('tr')
+		rows = table.find_elements_by_tag_name('tr')
 
 		self.assertTrue(
-		any(row.text == '1: Kupic pawie piora' for row in rows)
+		any(row.text == '1: Kupic pawie piora' for row in rows),
+		"Nowy element nie znajduje sie w tabeli"
 
 		)
 
