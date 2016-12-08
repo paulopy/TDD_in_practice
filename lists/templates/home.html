@@ -1,21 +1,21 @@
 <html>
 <head>
-<title>Listy rzeczy do zrobienia</title>
+  <title>Listy rzeczy do zrobienia</title>
 </head>
 <body>
   <h1>Twoja lista rzeczy do zrobienia</h1>
   <form method="post">
-<input type="text" name="item_text" value=""
-placeholder="Wpisz rzecz do zrobienia" id="id_new_item">
-{% csrf_token %}
+    <input type="text" name="item_text" value=""
+    placeholder="Wpisz rzecz do zrobienia" id="id_new_item">
+    {% csrf_token %}
   </form>
 
 
-<table id="id_list_table">
-<tr>
-  <td>1: {{ new_item_text }}</td>
-</tr>
-</table>
+  <table id="id_list_table">
+    <tr>
+      <td>1: {{ new_item_text }}</td>
+    </tr>
+  </table>
 
 </body>
 </html>
