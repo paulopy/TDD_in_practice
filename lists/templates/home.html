@@ -4,7 +4,7 @@
 </head>
 <body>
   <h1>Utworz nowa liste rzeczy do zrobienia</h1>
-  <form method="post">
+  <form method="post" action="/lists/new">
     <input type="text" name="item_text" value=""
     placeholder="Wpisz rzecz do zrobienia" id="id_new_item">
     {% csrf_token %}
