@@ -26,7 +26,7 @@ class NewVisitorTest(LiveServerTestCase):
 
 		self.assertIn('Listy',self.browser.title)
 		header_text = self.browser.find_element_by_tag_name('h1').text
-		self.assertIn('lista', header_text)
+		self.assertIn('liste', header_text)
 
 		inputbox = self.browser.find_element_by_id('id_new_item')
 		self.assertEqual(
